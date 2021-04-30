@@ -9,11 +9,13 @@ const urlController = new UrlController()
 
 api.post("/shorten", urlController.shorten )
 
+
 api.get('/test', (req: Request, res: Response) => {
     res.json({success: true})
     
 
 })
+api.get("/:hash", urlController.redirect)
 
 
 api.listen(port, () => console.log(`Express is listening on port ${port}`))

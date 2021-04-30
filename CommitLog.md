@@ -36,12 +36,30 @@
     - import express, {Request, Response} from 'express' 
     - GET /test
         - ok
+<br>
 
-</br>
-
-- fdafs
+- make shortUrl
     - added dependency
         - npm i --save shortid @types/shortid
+    - created controller/UrlController.ts
+        -  public async shorten
+    - created config/Constants.ts
+    - created POST /shorten on index.ts
+        - handler urlController.shorten
+<br>
+
+- redirect 
+    - created UrlController.redirect()
+        - mocked return for testing
+    - updated index.ts 
+        - GET /:hash
+            - redirects to link with hash
+<br>
+
+
+    
+
+
     
 
 
