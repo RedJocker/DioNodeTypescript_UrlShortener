@@ -48,13 +48,23 @@
         - handler urlController.shorten
 <br>
 
-- redirect 
+- made redirect method
     - created UrlController.redirect()
         - mocked return for testing
     - updated index.ts 
         - GET /:hash
             - redirects to link with hash
 <br>
+
+- connect to mongo
+    - add dependency mongoose
+        - npm install mongoose --save
+    - created database/MonogoConnection.ts
+    - updated index.ts
+<br>
+
+
+
 
 
     
