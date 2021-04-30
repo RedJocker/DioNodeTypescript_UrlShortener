@@ -72,6 +72,15 @@
         - data persisted on mongo 
 <br>
 
+- redirect from database
+    - updated UrlController.redirect
+    - tested GET with hash of data persisted previously
+        - redirects to page saved before
+    - tested GET with innexistent hash
+        - returns not found
+<br>
+
+
 
 
 

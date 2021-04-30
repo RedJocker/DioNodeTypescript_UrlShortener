@@ -16,7 +16,7 @@ export class UrlController {
         }
 
         const hash = shortId.generate()
-        const shortUrl = `${config.API_URL}/${hash}`
+        const shortUrl = `${config.API_URL}${hash}`
 
         const newUrl = await UrlModel.create({originUrl, hash, shortUrl})
         res.json(newUrl)
@@ -24,16 +24,19 @@ export class UrlController {
 
     public async redirect(req: Request, res: Response): Promise<void> {
 
-        const {hash} = req.params
-        console.log(hash)
+        const { hash } = req.params
+        const url = await UrlModel.findOne({ hash })
 
-        const mockReturn  = {
-            "originUrl": "https://dd.engineering/blog/how-to-set-up-a-back-end-project-using-typescript-and-node-js",
-            "hash": "tYGAUjon2",
-            "shortUrl": "http://localhost:3000//tYGAUjon2"
+        if(url) {
+            res.redirect(url.originUrl) 
+            return
+        } else {
+            res.status(404).json({ error: 'Url not found'})
+            return
         }
+
         
-        res.redirect(mockReturn.originUrl) 
+        
     }
 
 
