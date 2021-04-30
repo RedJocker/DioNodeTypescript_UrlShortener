@@ -31,6 +31,13 @@
     - updated .gitignore
         - dist/
 <br>
+
+- creating test endpoint
+    - import express, {Request, Response} from 'express' 
+    - GET /test
+        - ok
+
+</br>
     
 
 
