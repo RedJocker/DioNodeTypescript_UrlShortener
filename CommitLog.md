@@ -38,6 +38,10 @@
         - ok
 
 </br>
+
+- fdafs
+    - added dependency
+        - npm i --save shortid @types/shortid
     
 
 
