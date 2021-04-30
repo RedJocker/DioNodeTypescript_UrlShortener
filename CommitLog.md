@@ -63,6 +63,18 @@
     - updated index.ts
 <br>
 
+- persist data
+    - add dependency
+        - npm install @hasezoey/typegoose
+    - created model/Url.ts
+    - updated UrlController.shorten
+    - tested POST from postman
+        - data persisted on mongo 
+<br>
+
+
+
+
 
 
 
